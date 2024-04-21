@@ -113,33 +113,13 @@ const ReclamationList: React.FC<Props> = ({ onEdit, onDelete }) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          mb: 5,
         }}
       >
         <Box
           sx={{
-            mt: 4,
-            mb: 4,
-            textAlign: "center",
-            p: 2,
-          }}
-        >
-          <Typography
-            variant="h3"
-            component="h1"
-            gutterBottom
-            sx={{
-              fontWeight: "medium", // Not too bold
-              color: "text.primary", // Default text color for themes
-              letterSpacing: "0.0075em", // Default letter spacing for a clean look
-            }}
-          >
-            Reclamations Table
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
             mb: 1,
+            my: 4,
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
@@ -149,7 +129,7 @@ const ReclamationList: React.FC<Props> = ({ onEdit, onDelete }) => {
           <Chip
             variant="soft"
             startDecorator={<ArticleOutlinedIcon />}
-            size="lg"
+            size="md"
           >
             Total {filteredReclamations.length}
           </Chip>
@@ -194,8 +174,6 @@ const ReclamationList: React.FC<Props> = ({ onEdit, onDelete }) => {
             component={Paper}
             elevation={4}
             sx={{
-              maxHeight: "700px",
-              overflow: "auto",
               maxWidth: "90vw",
               borderRadius: "16px",
             }}
